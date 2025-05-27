@@ -1,19 +1,36 @@
+:root {
+	--lavender: #b57edc;
+	--lavender-light: #dbb7f5;
+	--black: #000;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	margin: 0 10px;
 	padding: 0;
 }
 
+a {
+	color: var(--black);
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: var(--lavender);
+	text-decoration: underline;
+}
+
 .container {
 	width: 1100px;
 	margin: 10px auto;
-	border: 1px solid #000;
+	border: 1px solid var(--black);
 	box-sizing: border-box;
 }
 
 .row {
 	width: 100%;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid var(--black);
 	white-space: nowrap;
 	font-size: 0;
 }
@@ -33,6 +50,16 @@ body {
 	border-radius: 5px;
 }
 
+.photo img,
+.logos img {
+	transition: transform 0.3s ease;
+}
+
+.photo img:hover,
+.logos img:hover {
+	transform: scale(1.03);
+}
+
 .wid {
 	width: 40%;
 }
@@ -47,7 +74,7 @@ body {
 
 .top-center-row {
 	width: 100%;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid var(--black);
 	white-space: nowrap;
 	font-size: 0;
 }
@@ -86,10 +113,14 @@ body {
 	padding: 10px;
 	box-sizing: border-box;
 	font-size: 14px;
+	text-align: center;
 }
 
 .personal-info em {
 	font-style: italic;
+	color: var(--lavender);
+	-webkit-text-stroke: 0.3px var(--black);
+	font-weight: bold;
 }
 
 .menu {
@@ -100,11 +131,11 @@ body {
 }
 
 .bordered-right {
-	border-right: 1px solid #000;
+	border-right: 1px solid var(--black);
 }
 
 .bordered-left {
-	border-left: 1px solid #000;
+	border-left: 1px solid var(--black);
 }
 
 .content-section {
@@ -140,12 +171,16 @@ body {
 .section-title {
 	font-size: 16px;
 	padding: 10px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid var(--black);
+	color: var(--lavender);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .block {
 	padding: 10px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid var(--black);
 }
 
 .block:last-child {
@@ -155,7 +190,7 @@ body {
 
 .hobby-row {
 	padding: 10px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid var(--black);
 	text-wrap: wrap;
 }
 
@@ -172,10 +207,23 @@ body {
 	box-sizing: border-box;
 	vertical-align: top;
 	text-align: justify;
+	background-color: var(--lavender-light);
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease-in-out;
+}
+
+.hobby:hover {
+	transform: scale(1.02);
 }
 
 .hobby:last-child {
 	margin-right: 0;
+}
+
+.cat-hobby {
+	background-color: #ffe6f0;
+	font-weight: 500;
 }
 
 .footer-ads-row {
