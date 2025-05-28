@@ -113,6 +113,19 @@ header {
 	transform: scale(1.01);
 }
 
+.block p {
+	line-height: 1.6;
+}
+
+ul {
+	margin-left: 2.5em;
+	list-style-type: disc;
+}
+
+li {
+	margin-bottom: 0.5em;
+}
+
 .hobby-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -125,13 +138,21 @@ header {
 	background: var(--pink-light);
 	padding: 10px;
 	border-radius: 8px;
-	text-align: center;
 	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 	transition: transform 0.2s ease;
 }
 
+.hobby strong {
+	display: block;
+	text-align: center;
+}
+
 .hobby:hover {
 	transform: scale(1.03);
+}
+
+.hobby-small {
+	text-align: center;
 }
 
 .sidebar {
@@ -139,13 +160,6 @@ header {
 	padding: 10px;
 	text-align: center;
 	border-radius: 10px;
-}
-
-.sidebar div {
-	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-	background: white;
-	padding: 10px;
-	border-radius: 8px;
 }
 
 .ads-footer {

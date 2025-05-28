@@ -2,88 +2,92 @@
 <html lang="uk">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Персональний сайт</title>
-	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Персональний сайт - Хобі</title>
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 	<div class="container">
-
-		<div class="row clearfix">
-
-			<div class="photo bordered-right">
-				<img src="img/me.jpg" alt="Моє фото">
+		<header>
+			<div class="header-content">
+				<img src="img/tntu-logo.png" alt="ТНТУ" />
+				<img src="img/fis-logo.jpg" alt="ФІС" />
+				<img src="img/kn-logo.png" style="background-color: white;" alt="КН" />
 			</div>
+			<h1>Персональна сторінка</h1>
+			<p>Самарик Вікторія Мирославівна — група СН-31</p>
+		</header>
 
-			<div class="center-block">
+		<main class="main">
+			<section class="intro">
+				<div class="photo">
+					<img src="img/me.jpg" alt="Моє фото" />
+				</div>
+				<div class="university-info">
+					<p>
+						Тернопільський національний технічний<br />
+						університет ім. Івана Пулюя<br />
+						Факультет ФІС<br />
+						Кафедра комп’ютерних наук
+					</p>
+				</div>
+			</section>
 
-				<div class="top-center-row">
-					<div class="info">
-						<p>Тернопільський національний технічний<br>
-							університет ім. Івана Пулюя<br>
-							Факультет ФІС<br>
-							Кафедра комп’ютерних наук</p>
+			<section class="content-grid">
+				<div class="block" style='transform:none'>
+					<h2>Мої хобі</h2>
+					<br>
+					<div class="hobby-grid">
+						<div class="hobby">
+							<strong>Читаю книжки, поки не вирублюсь</strong>
+							<br><br>
+							<p>
+								Читання — мій спосіб втечі від реальності. Особливо коли дедлайн підкрадається, а я — десь на 300-й
+								сторінці. Іноді засинаю з книжкою в руці, а іноді книжка засинає раніше. Різне буває.
+							</p>
+						</div>
+
+						<div class="hobby">
+							<strong>Фотографую свою кішку і не соромлюсь цього</strong>
+							<p>
+								Її звати Мія, і вона — головна модель мого телефону. Це створіння щоранку мявкає, вимагаючи
+								погратись, наче будильник із характером. Мія не просто кішка, вона — персональний антистрес і злегка
+								пухнасте джерело безладу на ліжку.
+							</p>
+						</div>
+
+						<div class="hobby">
+							<strong>Практикую дзен між дедлайнами</strong>
+							<br><br>
+							<p>
+								Коли все горить, а треба зберігати спокій, я сідаю з чаєм, вмикаю серіал і роблю вигляд, що
+								контролюю ситуацію. Цей стан між "все пропало" і "може пронесе" я називаю своїм дзеном.
+							</p>
+						</div>
 					</div>
-					<div class="logos bordered-right">
-						<img src="img/tntu-logo.png" alt="Логотип ТНТУ">
-					</div>
-					<div class="logos">
-						<img src="img/fis-logo.jpg" alt="Логотип ФІС">
+
+					<div style="text-align: right; margin-top: 20px;">
+						<a href="index.html">&lt;&lt; Назад</a>
 					</div>
 				</div>
+			</section>
 
-				<div class="personal-info">
-					<strong>Персональна сторінка</strong><br>
-					<em>Самарик Вікторія Мирославівна</em><br>
-					група СН-31
-				</div>
+			<aside class="sidebar">
+				<div class='ad'>Рекламний блок</div>
+			</aside>
+
+			<div class="ads-footer">
+				<div class="ad">Реклама 1</div>
+				<div class="ad">Реклама 2</div>
+				<div class="ad">Реклама 3</div>
 			</div>
+		</main>
 
-			<div class="photo bordered-left">
-				<img src="img/kn-logo.png" alt="Логотип КН">
-			</div>
-		</div>
-
-		<div class="row clearfix content-section">
-			<div class="main-content bordered-right">
-				<div class="section-title"><strong>Мої хобі</strong></div>
-
-				<div class="hobby-row">
-					<div class="hobby">
-						<strong>Читаю книжки, поки не вирублюсь</strong><br><br>
-						Читання — мій спосіб втечі від реальності. Особливо коли дедлайн підкрадається, а я — десь на 300-й
-						сторінці. Іноді
-						засинаю з книжкою в руці, а іноді книжка засинає раніше. Різне буває.
-					</div>
-					<div class="hobby bordered-right bordered-left"><strong>Фотографую свою кішку і не соромлюсь
-							цього</strong><br><br>
-						Її звати Мія, і вона — головна модель мого телефону. Це створіння щоранку мявкає, вимагаючи погратись, наче
-						будильник із
-						характером. Мія не просто кішка, вона — персональний антистрес і злегка пухнасте джерело безладу на ліжку.
-					</div>
-					<div class="hobby"><strong>Практикую дзен між дедлайнами</strong><br><br><br>
-						Коли все горить, а треба зберігати спокій, я сідаю з чаєм, вмикаю серіал і роблю вигляд, що контролюю
-						ситуацію. Цей стан
-						між "все пропало" і "може пронесе" я називаю своїм дзеном. </div>
-					<div style="text-align: right; margin-top: 0 20px;">
-						<a href="index.html">
-							<< Назад </a>
-					</div>
-				</div>
-			</div>
-
-			<div class="sidebar">
-				Рекламний блок
-			</div>
-		</div>
-
-		<div class=" clearfix footer-ads-row">
-			<div class="footer-ad bordered-right">Рекламний блок 1</div>
-			<div class="footer-ad bordered-right">Рекламний блок 2</div>
-			<div class="footer-ad">Рекламний блок 3</div>
-		</div>
+		<footer>
+			© Тернопільський національний технічний університет ім. І. Пулюя, СН-31
+		</footer>
 	</div>
 </body>
 
