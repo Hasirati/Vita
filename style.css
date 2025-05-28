@@ -11,6 +11,17 @@
 	padding: 0;
 }
 
+a {
+	color: var(--black);
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: var(--lavender);
+	text-decoration: underline;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	min-height: 100vh;
@@ -91,11 +102,11 @@ header {
 }
 
 .block {
-	background: var(--lavender-light);
 	padding: 15px;
 	border-radius: 8px;
 	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 	transition: transform 0.2s ease;
+	text-align: justify;
 }
 
 .block:hover {
@@ -125,10 +136,16 @@ header {
 
 .sidebar {
 	background: var(--lavender-light);
-	padding: 15px;
+	padding: 10px;
 	text-align: center;
-	border-radius: 8px;
+	border-radius: 10px;
+}
+
+.sidebar div {
 	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+	background: white;
+	padding: 10px;
+	border-radius: 8px;
 }
 
 .ads-footer {
