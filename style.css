@@ -22,7 +22,6 @@ body {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	background: white;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -49,6 +48,7 @@ header {
 .header-content img {
 	height: 50px;
 	transition: transform 0.3s ease;
+	border-radius: 5px;
 }
 
 .header-content img:hover {
@@ -138,8 +138,7 @@ header {
 	margin-top: auto;
 	padding: 10px;
 	background: var(--lavender-light);
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-radius: 10px;
 }
 
 .ad {
