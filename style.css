@@ -2,244 +2,186 @@
 	--lavender: #b57edc;
 	--lavender-light: #dbb7f5;
 	--black: #000;
+	--pink-light: #ffe6f0;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
 	font-family: Arial, sans-serif;
-	margin: 0 10px;
-	padding: 0;
-}
-
-a {
-	color: var(--black);
-	text-decoration: none;
-	transition: color 0.3s;
-}
-
-a:hover {
-	color: var(--lavender);
-	text-decoration: underline;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
 }
 
 .container {
-	width: 1100px;
-	margin: 10px auto;
-	border: 1px solid var(--black);
-	box-sizing: border-box;
+	max-width: 1200px;
+	margin: 0 auto;
+	background: white;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
 }
 
-.row {
-	width: 100%;
-	border-bottom: 1px solid var(--black);
-	white-space: nowrap;
-	font-size: 0;
-}
-
-.photo {
-	width: 13%;
-	display: inline-block;
-	vertical-align: middle;
+header {
+	background: var(--lavender);
+	color: white;
+	padding: 20px;
 	text-align: center;
-	padding: 10px;
-	box-sizing: border-box;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
-.photo img {
-	width: 100%;
-	height: auto;
-	border-radius: 5px;
+.header-content {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-bottom: 10px;
 }
 
-.photo img,
-.logos img {
+.header-content img {
+	height: 50px;
 	transition: transform 0.3s ease;
 }
 
-.photo img:hover,
-.logos img:hover {
-	transform: scale(1.03);
+.header-content img:hover {
+	transform: scale(1.05);
 }
 
-.wid {
-	width: 40%;
+.main {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
-.center-block {
-	width: 74%;
-	display: inline-block;
-	vertical-align: middle;
-	box-sizing: border-box;
-	font-size: initial;
+.intro {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
-.top-center-row {
-	width: 100%;
-	border-bottom: 1px solid var(--black);
-	white-space: nowrap;
-	font-size: 0;
+.photo img {
+	max-width: 200px;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
 }
 
-.info {
-	width: 70%;
-	display: inline-block;
-	vertical-align: middle;
-	padding: 10px;
-	box-sizing: border-box;
-	font-size: 14px;
+.photo img:hover {
+	transform: scale(1.05);
 }
 
-.top-center-row p {
-	margin: 0;
-}
-
-.logos {
-	width: 15%;
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-	padding: 10px;
-	box-sizing: border-box;
-	font-size: initial;
-}
-
-.logos img {
-	width: 60px;
-	height: auto;
-	display: inline-block;
-}
-
-.personal-info {
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	font-size: 14px;
-	text-align: center;
-}
-
-.personal-info em {
-	font-style: italic;
-	color: var(--lavender);
-	-webkit-text-stroke: 0.3px var(--black);
-	font-weight: bold;
-}
-
-.menu {
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	text-align: center;
-}
-
-.bordered-right {
-	border-right: 1px solid var(--black);
-}
-
-.bordered-left {
-	border-left: 1px solid var(--black);
-}
-
-.content-section {
-	font-size: 14px;
-}
-
-.main-content {
-	display: inline-block;
-	width: 75%;
-	padding: 10px;
-	box-sizing: border-box;
-	vertical-align: top;
-	text-align: justify;
-	text-wrap: wrap;
-}
-
-.sidebar {
-	display: inline-block;
-	width: 25%;
-	padding: 10px;
-	box-sizing: border-box;
-	vertical-align: top;
-}
-
-.bio-text {
-	display: inline-block;
-	width: 55%;
-	padding: 10px;
-	box-sizing: border-box;
-	vertical-align: top;
-}
-
-.section-title {
+.university-info {
 	font-size: 16px;
-	padding: 10px;
-	border-bottom: 1px solid var(--black);
-	color: var(--lavender);
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	line-height: 1.5;
+}
+
+.content-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .block {
-	padding: 10px;
-	border-bottom: 1px solid var(--black);
+	background: var(--lavender-light);
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s ease;
 }
 
-.block:last-child {
-	border: 0;
-	padding-bottom: 0;
+.block:hover {
+	transform: scale(1.01);
 }
 
-.hobby-row {
-	padding: 10px;
-	border-bottom: 1px solid var(--black);
-	text-wrap: wrap;
-}
-
-.hobby-row:last-child {
-	border: 0;
-	padding-bottom: 0;
+.hobby-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 .hobby {
-	display: inline-block;
-	width: 32%;
-	margin-right: 1%;
+	flex: 1;
+	min-width: 200px;
+	background: var(--pink-light);
 	padding: 10px;
-	box-sizing: border-box;
-	vertical-align: top;
-	text-align: justify;
-	background-color: var(--lavender-light);
-	border-radius: 10px;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-	transition: transform 0.2s ease-in-out;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s ease;
 }
 
 .hobby:hover {
+	transform: scale(1.03);
+}
+
+.sidebar {
+	background: var(--lavender-light);
+	padding: 15px;
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ads-footer {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-top: auto;
+	padding: 10px;
+	background: var(--lavender-light);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.ad {
+	flex: 1;
+	background: white;
+	text-align: center;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s ease;
+}
+
+.ad:hover {
 	transform: scale(1.02);
 }
 
-.hobby:last-child {
-	margin-right: 0;
-}
-
-.cat-hobby {
-	background-color: #ffe6f0;
-	font-weight: 500;
-}
-
-.footer-ads-row {
-	vertical-align: top;
+footer {
+	background: var(--lavender);
+	color: white;
 	text-align: center;
-	font-size: 14px;
-}
-
-.footer-ad {
-	display: inline-block;
-	width: 32%;
-	margin-right: 1%;
 	padding: 10px;
-	box-sizing: border-box;
+	margin-top: auto;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
-.footer-ad:last-child {
-	margin-right: 0;
+/* Медіа-запити */
+@media (max-width: 768px) {
+	.hobby-grid {
+		flex-direction: column;
+	}
+
+	.header-content {
+		flex-direction: column;
+	}
+
+	.intro {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.ads-footer {
+		flex-direction: column;
+	}
 }
