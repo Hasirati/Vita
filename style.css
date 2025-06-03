@@ -23,19 +23,19 @@ a:hover {
 }
 
 body {
-	font-family: Arial, sans-serif;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
 	margin: 10px;
+	font-family: Arial, sans-serif;
 }
 
 .container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 150px auto 40px;
+
+	grid-template-areas: 'header' 'main' 'footer';
+
 	max-width: 1200px;
 	margin: 0 auto;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 }
@@ -47,13 +47,6 @@ header {
 	text-align: center;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-}
-
-.header-content {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-	margin-bottom: 10px;
 }
 
 .header-content img {
@@ -68,16 +61,14 @@ header {
 
 .main {
 	padding: 20px;
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	gap: 20px;
 }
 
 .intro {
-	display: flex;
-	gap: 20px;
+	display: grid;
+	grid-template-columns: 200px 1fr;
 	align-items: center;
-	flex-wrap: wrap;
 }
 
 .photo img {
@@ -91,13 +82,13 @@ header {
 }
 
 .university-info {
+	margin: 20px;
 	font-size: 16px;
 	line-height: 1.5;
 }
 
 .content-grid {
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	gap: 20px;
 }
 
@@ -127,24 +118,23 @@ li {
 }
 
 .hobby-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 15px;
+	text-align: center;
 }
 
 .hobby {
-	flex: 1;
-	min-width: 200px;
-	background: var(--pink-light);
-	padding: 10px;
-	border-radius: 8px;
-	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+	display: grid;
+	background-color: var(--pink-light);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 	transition: transform 0.2s ease;
 }
 
 .hobby strong {
 	display: block;
-	text-align: center;
 }
 
 .hobby:hover {
@@ -163,17 +153,15 @@ li {
 }
 
 .ads-footer {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 10px;
-	margin-top: auto;
 	padding: 10px;
 	background: var(--lavender-light);
 	border-radius: 10px;
 }
 
 .ad {
-	flex: 1;
 	background: white;
 	text-align: center;
 	padding: 10px;
@@ -191,27 +179,6 @@ footer {
 	color: white;
 	text-align: center;
 	padding: 10px;
-	margin-top: auto;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-}
-
-/* Медіа-запити */
-@media (max-width: 768px) {
-	.hobby-grid {
-		flex-direction: column;
-	}
-
-	.header-content {
-		flex-direction: column;
-	}
-
-	.intro {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.ads-footer {
-		flex-direction: column;
-	}
 }
